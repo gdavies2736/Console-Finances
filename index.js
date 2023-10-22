@@ -102,9 +102,37 @@ console.log ("-------------------------")
 //Add in a space after total months so there is a space in the console.
 //Console.log to check
 
-const totalMonths = finances.length;
-console.log ("Total months " + totalMonths)
+const months = finances.length;
+console.log ("Total months " + months)
 
+//delcaring total
+var total = 0;
+
+//declaring change
+var change = 0;
+
+//declare value
+
+var average;
+
+//delare analysis to help display analysis
+
+var analysis;
+
+//declare net 
+
+var net = 0;
+
+//declare net array
+
+var arraynet = [];
+
+//declare net change sum
+var netSum = 0;
+
+var least = ['' , 9999999999999]
+
+var greatest = ['' , 0]
 
 //2. Net total amount of profit / losses
 //Create variable for net amount of profit and loss over the total period.
@@ -112,13 +140,42 @@ console.log ("Total months " + totalMonths)
 //start at Jan-2010, End Feb-2017.
 //Total sum of these values should equal the total amount of profit or loss.
 
-const net = finances
+//const net = finances
+for (let i = 0; i < finances.length; i++) {
+ for (let j = 0; j < finances(i).length; j++) {
+ 
+  if (typeof finances[i][j] !== 'string') {
+    total += finances[i][j];
+    change = finances[i][j] - net;
+    net = finances[i][j];
+    arraynet.push(change)
+console.log(arraynet)
 
+    //If statement for the greatest
+    if (change > greatest[1]) {
+      greatest = [finances[i][0], finances[i][1]]
+    }
+    console.log(least[1])
+
+    if (change < least[1]) {
+      least = [finances[i][0], finances[i][1]]
+    }
+    console.log(least[1])
+
+  }
+
+ }
+  
+}
 
 
 //3. Average in changes in profit/ losses over entire period.
 //Add all numbers and divide by 86.
 
+for (let i = 0; i < arraynet.length; i++) {
+netSum += arraynet[i]
+  
+}
 
 //4. Greatest increase in profits/losses
 //create function to find highest number
