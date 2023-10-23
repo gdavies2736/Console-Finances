@@ -124,12 +124,34 @@ for (let i = 0; i < finances.length; i++) {
 }
 console.log("Total: $" + netTotalProfLoss);
 
+//6. Average Changes in Profit/Losses over entire period.
+//Create variable for total amount of differences from month-month.
+//Create variable for the average changes.
 
-///////////////////////////////////////////////////////
+var totalAmountOfDifferences = 0;
+var averageChanges = 0;
+
+//Track what total changes are from month to month
+//Run for loop
+//Find the difference between each month by nextMonth - currentMonth
+//Add these differences
+//Find average by dividing total amount of difference / total number of months
+//Console.log("Average Change: " + averageChanges);
+
+for (let i = 0; i < finances.length - 1; i++) {
+var currentMonth = finances[i][1]
+var nextMonth = finances[i+1][1]
+var difference = nextMonth - currentMonth
+totalAmountOfDifferences += difference
+}
+var average = Math.round((totalAmountOfDifferences / (finances.length - 1)) *100) / 100
+
+averageChanges = (totalAmountOfDifferences / months)
+console.log("Average Change: " + averageChanges);
 
 
 
-
+///////////////////////////////////////////////////
 
 
 
