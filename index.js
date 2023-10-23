@@ -145,9 +145,9 @@ var nextMonth = finances[i+1][1]
 var difference = nextMonth - currentMonth
 totalAmountOfDifferences += difference
 }
-var average = Math.round((totalAmountOfDifferences /(finances.length - 1)) *100) /100
+var averageChanges = Math.round((totalAmountOfDifferences /(finances.length - 1)) *100) /100
 
-averageChanges = (totalAmountOfDifferences / months)
+
 console.log("Average Change: " + averageChanges);
 
 
