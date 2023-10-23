@@ -86,103 +86,68 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+/*Dataset*/
 
-//Create heading from ReadMe
+//1. Overview - Dataset - finances. Consists of sets of arrays.
+//Each array has an index a month [0] (string) & number [1] (interger).
+//These indexes relate to date & profit/losses.
+
+//2. Create heading from ReadMe
 //Console log to check
+
 console.log ("Financial Analysis")
 
-//Create underline from ReadMe
+//3. Create underline from ReadMe
 //Console log to check
+
 console.log ("-------------------------")
 
-//Working out the total number of months
+//4. Total number of Months
+//Calculate the total number of months included in dataset.
 //Find out the number of months by finding the length of the array
 //Create new variable name for total months
-//totalMonths should be equal to the length of the array//
+//totalMonths should be equal to the length of the array.
 //Add in a space after total months so there is a space in the console.
-//Console.log to check
+//console.log ("Total months " + months);
 
-const months = finances.length;
-console.log ("Total months " + months)
+var months = finances.length;
+console.log ("Total months " + months);
 
-//delcaring total
-var total = 0;
+//5. Net Total Amount of Profit/Losses
+//Run a for loop.
+//Create sum to add the intergers.
+//console log("netTotalProfLoss += finances [i][1];")
 
-//declaring change
-var change = 0;
-
-//declare value
-
-var average;
-
-//delare analysis to help display analysis
-
-var analysis;
-
-//declare net 
-
-var net = 0;
-
-//declare net array
-
-var arraynet = [];
-
-//declare net change sum
-var netSum = 0;
-
-var least = ['' , 9999999999999]
-
-var greatest = ['' , 0]
-
-//2. Net total amount of profit / losses
-//Create variable for net amount of profit and loss over the total period.
-//create for loop to add the values together.
-//start at Jan-2010, End Feb-2017.
-//Total sum of these values should equal the total amount of profit or loss.
-
-//const net = finances
+let netTotalProfLoss = 0;
 for (let i = 0; i < finances.length; i++) {
- for (let j = 0; j < finances(i).length; j++) {
- 
-  if (typeof finances[i][j] !== 'string') {
-    total += finances[i][j];
-    change = finances[i][j] - net;
-    net = finances[i][j];
-    arraynet.push(change)
-console.log(arraynet)
-
-    //If statement for the greatest
-    if (change > greatest[1]) {
-      greatest = [finances[i][0], finances[i][1]]
-    }
-    console.log(least[1])
-
-    if (change < least[1]) {
-      least = [finances[i][0], finances[i][1]]
-    }
-    console.log(least[1])
-
-  }
-
- }
-  
+  netTotalProfLoss += finances [i][1];
 }
+console.log("Total: $" + netTotalProfLoss);
 
 
-//3. Average in changes in profit/ losses over entire period.
-//Add all numbers and divide by 86.
+///////////////////////////////////////////////////////
 
-for (let i = 0; i < arraynet.length; i++) {
-netSum += arraynet[i]
-  
-}
 
-//4. Greatest increase in profits/losses
-//create function to find highest number
-//start at Jan - 2010
-//end at Feb- 2017
 
-//5. Greatest decrease in profits/losses
-//create function to find the lowest number
-//start at Jan - 2010
-//end at Feb - 2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
