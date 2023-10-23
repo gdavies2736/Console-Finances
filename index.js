@@ -136,6 +136,7 @@ var averageChanges = 0;
 //Find the difference between each month by nextMonth - currentMonth
 //Add these differences
 //Find average by dividing total amount of difference / total number of months
+//Round off decimal using math.round
 //Console.log("Average Change: " + averageChanges);
 
 for (let i = 0; i < finances.length - 1; i++) {
@@ -144,14 +145,39 @@ var nextMonth = finances[i+1][1]
 var difference = nextMonth - currentMonth
 totalAmountOfDifferences += difference
 }
-var average = Math.round((totalAmountOfDifferences / (finances.length - 1)) *100) / 100
+var average = Math.round((totalAmountOfDifferences /(finances.length - 1)) *100) /100
 
 averageChanges = (totalAmountOfDifferences / months)
 console.log("Average Change: " + averageChanges);
 
 
+//7. Greatest increase in profits/losses (date and amount) over the entire period.
+//Run for loop 
+//Use if statement to find greatest increase in profit/loss
 
-///////////////////////////////////////////////////
+var greatestIncrease = ["" , 0 ]
+for (let i = 0; i < finances.length; i++) {
+var currentMonth = finances[i]
+if (currentMonth[1] > greatestIncrease[1]) {
+  greatestIncrease = currentMonth
+}    
+}
+console.log("Greatest Increase in Profits/Losses: " + greatestIncrease);
+
+//8. Greatest decrease in profit/losses (date and amount) over the entire period.
+//Same as greatestIncrease, but current month needs to be < least value
+
+var least = ["" , 0]
+for (let i = 0; i < finances.length; i++) {
+  var currentMonth = finances[i]
+if (currentMonth[1] < least[1]) {
+  least = currentMonth
+}    
+  
+}
+console.log("Greatest Decrease in Profits/Losses: " + least);
+
+
 
 
 
