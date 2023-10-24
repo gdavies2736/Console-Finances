@@ -2,12 +2,12 @@
 
 **Table of contents**
 
-**1. Description
-2. Issues
-3. Usage
-4. Installation
-5. Credits
-6. Licencse**
+**Description
+Issues
+Usage
+Installation
+Credits
+Licencse**
 
 
 **Description**
