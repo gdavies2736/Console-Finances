@@ -7,7 +7,7 @@ Issues
 Usage
 Installation
 Credits
-Licencse**
+License**
 
 
 **Description**
