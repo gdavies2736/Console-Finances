@@ -152,30 +152,49 @@ console.log("Average Change: " + averageChanges);
 
 
 //7. Greatest increase in profits/losses (date and amount) over the entire period.
-//Run for loop 
+//Declare variables
+//Run for loop to start at the begining of the array
+//To find difference between months take away the previous month from the current month(amount) 
 //Use if statement to find greatest increase in profit/loss
-
-var greatestIncrease = ["" , 0 ]
-for (let i = 0; i < finances.length; i++) {
-var currentMonth = finances[i]
-if (currentMonth[1] > greatestIncrease[1]) {
-  greatestIncrease = currentMonth
-}    
-}
-console.log("Greatest Increase in Profits/Losses: " + greatestIncrease);
+//Unable to deduct a previous month from [0] so need to start from the second month (i > 0)
+//Run an additional if statement in loop - if difference is greater than the greatestIncrease [1]
 
 //8. Greatest decrease in profit/losses (date and amount) over the entire period.
-//Same as greatestIncrease, but current month needs to be < least value
+//Same as greatestIncrease, but current month needs to be < greatestDecrease value
 
-var least = ["" , 0]
+var currentMonth;
+var monthAndYear; 
+var amount;
+var previousAmount = 0;
+var total = 0;
+var change = 0;
+var greatestIncrease = ["" , 0 ]
+var greatestDecrease = ["" , 0]
+var netChangeSum = 0;
+
 for (let i = 0; i < finances.length; i++) {
-  var currentMonth = finances[i]
-if (currentMonth[1] < least[1]) {
-  least = currentMonth
-}    
-  
+  currentMonth = finances[i];
+  monthAndYear = currentMonth[0];
+  amount = currentMonth[1];
+  total += amount;
+  if (i > 0) change = amount - previousAmount;
+  previousAmount = amount;
+  netChangeSum += change; 
+
+  if (change > greatestIncrease[1]){
+    greatestIncrease = [monthAndYear,change];
+  } 
+
+  if (change < greatestDecrease[1]) {
+    greatestDecrease = [monthAndYear,change];
 }
-console.log("Greatest Decrease in Profits/Losses: " + least);
+}
+
+console.log(("Greatest Increase in Profits/Losses: ") + (greatestIncrease));
+
+console.log(("Greatest Decrease in Profits/Losses: ") + (greatestDecrease));
+
+
 
 
 
