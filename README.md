@@ -20,6 +20,8 @@ Greatest monthly increase.
 Greatest monthly decrease.
 
 The screenshot below shows the expected outputs:
+
+
 ![image](https://github.com/gdavies2736/Console-Finances/assets/89836987/95d34b3e-e921-40f3-b557-2442e372e0a0)
 
 
