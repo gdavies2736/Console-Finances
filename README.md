@@ -79,7 +79,7 @@ Once accessed, open with Chrome.
 The following webpage should be visible.
 Use Chrome Devtools by right clicking on the page and selecting inspect.
 Once the Devtools are open, navigate to the console tab.
-￼
+
 
 
 **Installation**
