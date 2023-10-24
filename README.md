@@ -14,9 +14,6 @@ Description
 For this project, I was given a set of financial records and tasked with analysing them. To do this, I needed to apply fundamental Javascript skills in order to process financial information and display the outputs in the console log. The results needed to consist of:
  - Total number of months. - Total profit over the entire period the dataset covered. - Average monthly change in profit/loss over the entire period. - Greatest monthly increase. - Greatest monthly decrease.
 
-The screenshot below shows how the console should look by the end of the project.
-
-￼
 
 Issues
 
