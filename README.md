@@ -66,7 +66,9 @@ The outputs in the console from this task can be viewed in the screenshot below:
 
 
 
-To access this project, the deployed website can be viewed at …..
+To access this project, the deployed website can be viewed at:
+
+**https://gdavies2736.github.io/Console-Finances/**
 
 
 
